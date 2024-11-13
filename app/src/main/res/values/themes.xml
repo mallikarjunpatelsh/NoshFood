@@ -1,0 +1,77 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.NoshFood" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:colorBackground">@color/app_color</item>
+        <item name="android:colorPrimary">@color/blue</item>
+        <item name="android:colorSecondary">@color/orange</item>
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.NoshFood" parent="Base.Theme.NoshFood" />
+
+    <style name="navigation_style_active" parent="Theme.NoshFood">
+        <!-- Customize your theme here. -->
+        <item name="itemIconTint">@color/orange</item>
+        <item name="itemTextColor">@color/orange</item>
+    </style>
+
+    <style name="header" parent="Base.Theme.NoshFood">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="action_textview" parent="Base.Theme.NoshFood">
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingHorizontal">@dimen/dimen_16</item>
+        <item name="android:paddingVertical">@dimen/dimen_10</item>
+    </style>
+
+    <style name="BottomSheetDialogRoundedCorners" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet_attachment</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:maxWidth" tools:ignore="PrivateResource">@dimen/material_bottom_sheet_max_width</item>
+    </style>
+
+    <!--     Time picker-->
+
+    <!--    TimePicker Display style-->
+    <style name="BaseTheme.Widget.Chip" parent="Widget.MaterialComponents.TimePicker.Display">
+        <item name="android:textColor">@color/selector_text_chip</item>
+        <item name="chipBackgroundColor">@color/selector_bg_chip</item>
+<!--        <item name="android:textAppearance">@style/BaseTheme.TextAppearance.Subtitle-->
+<!--        </item>-->
+    </style>
+
+    <!--    Clock style-->
+    <style name="AppTheme.Widget.TimePicker.Clock" parent="Widget.MaterialComponents.TimePicker.Clock">
+        <item name="clockFaceBackgroundColor">@color/blue</item>
+        <item name="clockHandColor">@color/blue</item>
+<!--        <item name="clockNumberTextColor">@color/selector_time_picker_clock_text</item>-->
+    </style>
+
+    <!--    AM/PM Button style-->
+    <style name="AppTheme.Widget.TimePicker.Clock.AmPmButton" parent="Widget.MaterialComponents.TimePicker.Button">
+        <item name="backgroundTint">@color/selector_bg_chip</item>
+<!--        <item name="android:textAppearance">@style/BaseTheme.TextAppearance.Subtitle.Small.Bold-->
+<!--        </item>-->
+        <item name="strokeColor">@color/blue</item>
+        <item name="android:textColor">@color/selector_text_chip</item>
+    </style>
+
+    <style name="BaseTheme.TimePicker" parent="ThemeOverlay.MaterialComponents.TimePicker">
+        <item name="materialClockStyle">@style/AppTheme.Widget.TimePicker.Clock</item>
+        <item name="chipStyle">@style/BaseTheme.Widget.Chip</item>
+<!--        <item name="materialTimePickerTitleStyle">@style/BaseTheme.TextAppearance.H1.Bold</item>-->
+        <item name="materialButtonOutlinedStyle">@style/AppTheme.Widget.TimePicker.Clock.AmPmButton
+        </item>
+        <item name="colorSurface">@color/white</item>
+    </style>
+</resources>

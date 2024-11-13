@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">NoshFood</string>
+    <string name="cook">Cook</string>
+    <string name="favourites">Favourites</string>
+    <string name="manual">Manual</string>
+    <string name="device">Device</string>
+    <string name="preference">Preferences</string>
+    <string name="more">More</string>
+    <string name="settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="cannot_connect_to_server">cannot connect to server</string>
+    <string name="_30_min_medium_prep">30 min - Medium prep.</string>
+    <string name="search_for_dish_or_ingredient">Search for dish or ingredient</string>
+    <string name="italian_spagetti_pasta">Italian Spagetti pastaaaaaa</string>
+    <string name="explore_all_dishes">Explore all dishes</string>
+    <string name="confused_what_to_cook">Confused what to cook?</string>
+    <string name="schedule_cooking_time">Schedule Cooking Time</string>
+    <string name="delete"><u>Delete</u></string>
+    <string name="re_schedule">Re-schedule</string>
+</resources>

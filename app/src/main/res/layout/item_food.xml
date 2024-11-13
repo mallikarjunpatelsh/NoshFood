@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="food"
+            type="com.nosh.food.data.service.data.DishesItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/parent_cardview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dimen_16"
+        android:layout_margin="@dimen/dimen_16">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/dimen_250"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_10">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/food_image_view"
+                android:layout_width="@dimen/dimen_200"
+                android:layout_height="@dimen/dimen_200"
+                android:background="@drawable/round_corner_bg"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UnusedAttribute" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/food_type_image"
+                android:layout_width="@dimen/dimen_16"
+                android:layout_height="@dimen/dimen_16"
+                android:clipToOutline="true"
+                android:layout_margin="@dimen/dimen_6"
+
+                app:srcCompat="@drawable/baseline_adjust_24"
+                app:layout_constraintEnd_toEndOf="@+id/food_image_view"
+                app:layout_constraintTop_toTopOf="@+id/food_image_view"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/tv_food_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="2"
+                android:text="4.3"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_12"
+                android:background="@drawable/rating_round_corner_bg"
+                android:padding="@dimen/dimen_6"
+                app:drawableStartCompat="@drawable/baseline_star_24"
+                app:layout_constraintBottom_toBottomOf="@+id/food_image_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/food_image_view"
+                tools:text="4.3" />
+
+            <TextView
+                android:id="@+id/tv_food_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="2"
+                android:text="@{food.dishName}"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_food_rating"
+                tools:text="Italian Spghetti Pasta" />
+
+            <TextView
+                android:id="@+id/tv_cook_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="2"
+                android:text="@string/_30_min_medium_prep"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_10"
+                app:drawableStartCompat="@drawable/ic_baseline_food_bank_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_food_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

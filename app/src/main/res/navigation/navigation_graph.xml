@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/nav_cook">
+
+    <fragment
+        android:id="@+id/nav_cook"
+        android:name="com.nosh.food.ui.cook.CookFragment"
+        android:label="fragment_cook"
+        tools:layout="@layout/fragment_cook" />
+</navigation>
